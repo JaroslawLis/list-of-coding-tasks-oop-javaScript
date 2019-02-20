@@ -1,0 +1,31 @@
+header form {
+  max-width: 40%;
+}
+
+header form div {
+  position: relative;
+}
+
+header form div input[name="form-task"] {
+  padding-right: 12px;
+  font-size: 25px;
+  padding-left: 10px;
+  width: 80%;
+}
+
+header form div input[name="form-task"]:focus {
+  background-color: yellow;
+}
+
+header form div label {
+  position: absolute;
+  left: 20px;
+}
+
+header form div input[name="form-task"]:focus ~ label,
+header form div input[name="form-task"]:valid ~ label {
+  top: 40px;
+  left: 40px;
+  background-color: #000;
+}
+/*# sourceMappingURL=style.css.map */
