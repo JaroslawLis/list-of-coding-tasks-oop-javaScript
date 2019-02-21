@@ -13,23 +13,25 @@
 
 <body>
     <header>
-        <form action="" class="add-task">
-            <div>
-                <input type="text" name="form-task" id="">
-                <label for="form-task"><a href="https://icons8.com/icon/48198/add-new">Add New icon by Icons8</a></label>
-            </div>
-            <input type="submit" value="dodaj zadanie">
-        </form>
+
+
     </header>
     <main>
-        <div id="tasks"></div>
+        <div class="container">
+            <form action="" class="add-task">
+
+                <input type="text" name="form-task" id="">
+                <input type="submit" id="">
+            </form>
+            <div id="tasks"></div>
+        </div>
     </main>
     <footer>
         <a href="https://icons8.com/icon/48198/add-new">Add New icon by Icons8</a>
     </footer>
 
 
-    <script src="js/EventDispatcher.js"></script>
+
     <script src="js/TaskModel.js"></script>
     <script src="js/TaskView.js"></script>
     <script src="js/TaskController.js"></script>

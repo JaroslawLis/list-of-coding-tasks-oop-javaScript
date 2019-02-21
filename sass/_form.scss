@@ -1,33 +1,45 @@
-header {
-    form {
-        max-width: 40%;
+form {
+    max-width: 40%;
+    display: flex;
+    margin: 0 auto;
 
-        div {
-            position: relative;
+    input[name="form-task"] {
+        padding-right: 12px;
+        font-size: 25px;
+        padding-left: 10px;
+        width: 80%;
 
-            input[name="form-task"] {
-                padding-right: 12px;
-                font-size: 25px;
-                padding-left: 10px;
-                width: 80%;
-
-                &:focus {
-                    background-color: yellow;
-                }
-            }
-
-            label {
-                position: absolute;
-                left: 20px;
-
-            }
-
-            input[name="form-task"]:focus~label,
-            input[name="form-task"]:valid~label {
-                top: 40px;
-                left: 40px;
-                background-color: #000;
-            }
+        &:focus {
+            background-color: yellow;
         }
+
     }
+
+    input[type="submit"] {
+
+        //  Reset button styles.
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        // background-color: transparent;
+        cursor: pointer;
+
+        background: url('/icons/icons8-add-new-64.png') no-repeat;
+        text-indent: -1000em;
+        width: 64px;
+        height: 64px;
+        border: none;
+        transition: .3s;
+
+        &:active {
+            transform: translateY(4px);
+        }
+
+    }
+
+
+
+
+
 }

@@ -13,7 +13,8 @@ class TaskView {
         todoList.forEach((data, i) => {
 
 
-            html += `<div class="row_in_table"><div>${(i + 1)}</div><div>${data.textTask} </div><div>${data.dateTask}</div><div><button class="remove">usuń</button></div></div>`;
+            html += `<div class="row_in_table"><div>${(i + 1)}</div><div>${data.textTask} </div><div>${
+               new Date(data.dateTask).toDateString()}</div><button class="remove"</button><button class="mark_as_done"</button></div>`;
         });
         this.taskView.innerHTML = html;
         //console.log(todolist);

@@ -1,31 +1,132 @@
-header form {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-height: 1120px;
+}
+
+main div.container {
+  margin: 20px auto;
+  width: 60%;
+}
+
+main div.container div#tasks {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+main div.container div#tasks div.row_in_table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+  margin: 2px;
+  font-size: 20px;
+  line-height: 64px;
+}
+
+main div.container div#tasks div.row_in_table button[class="remove"] {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  background: url("/icons/icons8-cancel-64.png");
+  background-size: cover;
+}
+
+main div.container div#tasks div.row_in_table button[class="mark_as_done"] {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  background: url("/icons/icons8-checkmark-64.png");
+  background-size: cover;
+}
+
+main div.container div#tasks div.row_in_table button[class="mark_as_done"]:active {
+  background-color: #000;
+}
+
+main div.container div#tasks div.row_in_table:nth-child(odd) {
+  background-color: #e1e1e1;
+}
+
+main div.container div#tasks div.row_in_table:hover {
+  background-color: #f0f;
+}
+
+main div.container div#tasks div.row_in_table div:nth-child(1) {
+  -ms-flex-preferred-size: 2%;
+      flex-basis: 2%;
+  text-align: center;
+}
+
+main div.container div#tasks div.row_in_table div:nth-child(2) {
+  -ms-flex-preferred-size: 63%;
+      flex-basis: 63%;
+  padding-left: 20px;
+}
+
+form {
   max-width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
 }
 
-header form div {
-  position: relative;
-}
-
-header form div input[name="form-task"] {
+form input[name="form-task"] {
   padding-right: 12px;
   font-size: 25px;
   padding-left: 10px;
   width: 80%;
 }
 
-header form div input[name="form-task"]:focus {
+form input[name="form-task"]:focus {
   background-color: yellow;
 }
 
-header form div label {
-  position: absolute;
-  left: 20px;
+form input[type="submit"] {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: url("/icons/icons8-add-new-64.png") no-repeat;
+  text-indent: -1000em;
+  width: 64px;
+  height: 64px;
+  border: none;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-header form div input[name="form-task"]:focus ~ label,
-header form div input[name="form-task"]:valid ~ label {
-  top: 40px;
-  left: 40px;
-  background-color: #000;
+form input[type="submit"]:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 /*# sourceMappingURL=style.css.map */

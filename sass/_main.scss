@@ -1,0 +1,80 @@
+main {
+    max-height: 1120px;
+
+    div.container {
+        margin: 20px auto;
+        width: 60%;
+
+        div#tasks {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            div.row_in_table {
+                display: flex;
+                border: 1px solid black;
+                margin: 2px;
+                font-size: 20px;
+                line-height: 64px;
+
+                button[class="remove"] {
+                    @include button-reset;
+                    margin-left: 10px;
+                    width: 50px;
+                    height: 50px;
+                    transform: translateY(10%);
+                    background: url('/icons/icons8-cancel-64.png');
+                    background-size: cover;
+
+                }
+
+                button[class="mark_as_done"] {
+                    @include button-reset;
+                    margin-left: 10px;
+                    width: 50px;
+                    height: 50px;
+                    transform: translateY(10%);
+                    background: url('/icons/icons8-checkmark-64.png');
+                    background-size: cover;
+
+                    &:active {
+                        background-color: #000;
+                    }
+                }
+
+
+
+
+
+                &:nth-child(odd) {
+                    background-color: #e1e1e1;
+                }
+
+                &:hover {
+                    background-color: #f0f;
+
+                }
+
+                div {
+
+                    &:nth-child(1) {
+                        flex-basis: 2%;
+                        text-align: center;
+                    }
+
+                    &:nth-child(2) {
+                        flex-basis: 63%;
+                        padding-left: 20px;
+
+                    }
+
+                    &:nth-child(3) {}
+
+
+
+                }
+            }
+        }
+    }
+}
