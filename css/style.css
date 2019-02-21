@@ -47,7 +47,7 @@ main div.container div#tasks div.row_in_table button[class="remove"] {
   height: 50px;
   -webkit-transform: translateY(10%);
           transform: translateY(10%);
-  background: url("/icons/icons8-cancel-64.png");
+  background: url("../icons/icons8-cancel-64.png");
   background-size: cover;
 }
 
@@ -63,7 +63,7 @@ main div.container div#tasks div.row_in_table button[class="mark_as_done"] {
   height: 50px;
   -webkit-transform: translateY(10%);
           transform: translateY(10%);
-  background: url("/icons/icons8-checkmark-64.png");
+  background: url("../icons/icons8-checkmark-64.png");
   background-size: cover;
 }
 
@@ -104,6 +104,7 @@ form input[name="form-task"] {
   font-size: 25px;
   padding-left: 10px;
   width: 80%;
+  background-color: #f1eded;
 }
 
 form input[name="form-task"]:focus {
@@ -116,7 +117,7 @@ form input[type="submit"] {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  background: url("/icons/icons8-add-new-64.png") no-repeat;
+  background: url("../icons/icons8-add-new-64.png") no-repeat;
   text-indent: -1000em;
   width: 64px;
   height: 64px;
