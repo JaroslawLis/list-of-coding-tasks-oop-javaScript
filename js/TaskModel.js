@@ -28,6 +28,10 @@ class TaskModel {
     getTasksCodeList() {
         return this.tasksCodeList;
     }
+    removeTask(id) {
+        this.tasksCodeList.splice(id, 1);
+        this.writeTask(this.tasksCodeList);
+    }
 
 
 

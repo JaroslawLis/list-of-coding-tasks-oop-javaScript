@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -76,7 +80,7 @@ main div.container div#tasks div.row_in_table:nth-child(odd) {
 }
 
 main div.container div#tasks div.row_in_table:hover {
-  background-color: #f0f;
+  background-color: #ffe6e6;
 }
 
 main div.container div#tasks div.row_in_table div:nth-child(1) {
@@ -97,6 +101,9 @@ form {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  border: 1px dotted black;
+  border-radius: 10px;
+  padding: 10px 70px 10px 70px;
 }
 
 form input[name="form-task"] {
