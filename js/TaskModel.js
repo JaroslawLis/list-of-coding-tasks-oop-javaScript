@@ -6,24 +6,18 @@ class TaskModel {
         localStorage.setItem('savedCodeTasks', JSON.stringify(tasksCodeList));
     }
     addTask(textTask) {
-        //console.log(e);
 
-        // const textTask = document.querySelector('input[name="form-task"]').value;
-        // const dateTask = document.querySelector('input[name="form-date"]').value;
         const dateTask = Date.now();
+        const is_Done = false;
         const myTask = {
             textTask,
-            dateTask
+            dateTask,
+            is_Done
         }
-        console.log(myTask);
-        this.tasksCodeList.push(myTask);
-        //console.log(this.tasksCodeList);
-        this.writeTask(this.tasksCodeList);
-        console.log(this);
-        // showTasks();
-        view.render();
 
-        console.log(this);
+        this.tasksCodeList.push(myTask);
+        this.writeTask(this.tasksCodeList);
+
     }
     getTasksCodeList() {
         return this.tasksCodeList;
@@ -32,7 +26,10 @@ class TaskModel {
         this.tasksCodeList.splice(id, 1);
         this.writeTask(this.tasksCodeList);
     }
-
+    markTask(id) {
+        this.tasksCodeList[id].is_Done = true;
+        this.writeTask(this.tasksCodeList);
+    }
 
 
 }
