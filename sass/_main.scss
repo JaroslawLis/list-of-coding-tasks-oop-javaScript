@@ -10,11 +10,17 @@ main {
             display: flex;
             flex-direction: column;
             margin-top: 20px;
+            background-color: rgba($color: #ffffff, $alpha: .5);
+            border-radius: 20px;
+
+            padding: 30px;
 
             div.row_in_table {
                 display: flex;
                 border: 1px solid black;
                 margin: 2px;
+                border-radius: 20px;
+                padding-left: 10px;
                 font-size: 20px;
                 line-height: 64px;
 
@@ -69,7 +75,9 @@ main {
 
                     }
 
-                    &:nth-child(3) {}
+                    &:nth-child(3) {
+                        white-space: nowrap;
+                    }
 
 
 

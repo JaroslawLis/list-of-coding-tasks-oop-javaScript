@@ -6,6 +6,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(linear), color-stop(100%, 50%), color-stop(0%, 50%), color-stop(color-stop(0%, #dad298)), to(color-stop(100%, #b0dab8)));
+  background-image: linear-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dad298), color-stop(100%, #b0dab8));
+  background-image: -webkit-gradient(linear, right top, left top, from(#dad298), to(#b0dab8));
+  background-image: linear-gradient(to left, #dad298, #b0dab8);
 }
 
 main {
@@ -27,6 +32,9 @@ main div.container div#tasks {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 30px;
 }
 
 main div.container div#tasks div.row_in_table {
@@ -35,6 +43,8 @@ main div.container div#tasks div.row_in_table {
   display: flex;
   border: 1px solid black;
   margin: 2px;
+  border-radius: 20px;
+  padding-left: 10px;
   font-size: 20px;
   line-height: 64px;
 }
@@ -95,6 +105,10 @@ main div.container div#tasks div.row_in_table div:nth-child(2) {
   padding-left: 20px;
 }
 
+main div.container div#tasks div.row_in_table div:nth-child(3) {
+  white-space: nowrap;
+}
+
 form {
   max-width: 40%;
   display: -webkit-box;
@@ -108,14 +122,21 @@ form {
 
 form input[name="form-task"] {
   padding-right: 12px;
-  font-size: 25px;
+  font-size: 22px;
   padding-left: 10px;
-  width: 80%;
-  background-color: #f1eded;
+  width: 90%;
+  border: 1px dotted #000;
+  border-radius: 10px;
+  background-color: transparent;
 }
 
 form input[name="form-task"]:focus {
-  background-color: yellow;
+  outline: none;
+  border-color: rgba(102, 175, 233, 0.9);
+  -webkit-box-shadow: -3px -3px 5px 0px rgba(0, 110, 255, 0.75), 3px 3px 5px 0px rgba(0, 110, 255, 0.75), 3px -3px 5px 0px rgba(0, 110, 255, 0.75), -3px 3px 5px 0px rgba(0, 110, 255, 0.75);
+          box-shadow: -3px -3px 5px 0px rgba(0, 110, 255, 0.75), 3px 3px 5px 0px rgba(0, 110, 255, 0.75), 3px -3px 5px 0px rgba(0, 110, 255, 0.75), -3px 3px 5px 0px rgba(0, 110, 255, 0.75);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#cbcb10), to(#e0e421));
+  background-image: linear-gradient(to top, #cbcb10, #e0e421);
 }
 
 form input[type="submit"] {
@@ -124,13 +145,12 @@ form input[type="submit"] {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  background: url("../icons/icons8-add-new-64.png") no-repeat;
+  background: url("../icons/icons8-plus.svg") no-repeat;
   text-indent: -1000em;
   width: 64px;
   height: 64px;
   border: none;
-  -webkit-transition: .3s;
-  transition: .3s;
+  background-size: 100%;
 }
 
 form input[type="submit"]:active {
