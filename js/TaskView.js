@@ -24,7 +24,7 @@ class TaskView {
         const todoList = this.taskModel.getTasksCodeList();
         let html = '';
         todoList.forEach((data, i) => {
-            //new Date(data.dateTask).toDateString()
+
             if (!data.is_Done) {
                 html += `<div class="row_in_table" data-id="${i}"><div>${(i + 1)}</div><div>${data.textTask} </div><div>${this.display_date(data.dateTask)
                }</div><button class="remove"</button><button class="mark_as_done"</button></div>`;
@@ -33,9 +33,13 @@ class TaskView {
         this.taskView.innerHTML = html;
 
     }
-    addCodeTask() {
+    addCodeTask(event) {
         event.preventDefault();
-        this.taskModel.addTask(event.target[0].value);
+        console.log(event);
+        // target[0] - becouse it is a first input
+        let status = document.querySelector('input[name = "opcja"]:checked').value;
+        this.taskModel.addTask(event.target[0].value, status);
+
         this.input.value = '';
         this.render();
 

@@ -5,14 +5,16 @@ class TaskModel {
     writeTask(tasksCodeList) {
         localStorage.setItem('savedCodeTasks', JSON.stringify(tasksCodeList));
     }
-    addTask(textTask) {
+    addTask(textTask, status) {
 
         const dateTask = Date.now();
         const is_Done = false;
         const myTask = {
             textTask,
             dateTask,
-            is_Done
+            is_Done,
+            status
+
         }
 
         this.tasksCodeList.push(myTask);

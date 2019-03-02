@@ -63,6 +63,7 @@ main div.container div#tasks div.row_in_table button[class="remove"] {
           transform: translateY(10%);
   background: url("../icons/icons8-cancel-64.png");
   background-size: cover;
+  outline: none;
 }
 
 main div.container div#tasks div.row_in_table button[class="mark_as_done"] {
@@ -110,21 +111,29 @@ main div.container div#tasks div.row_in_table div:nth-child(3) {
 }
 
 form {
-  max-width: 40%;
+  max-width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 auto;
   border: 1px dotted black;
   border-radius: 10px;
-  padding: 10px 70px 10px 70px;
+  padding: 10px 10px 10px 10px;
+}
+
+form div {
+  width: 100%;
 }
 
 form input[name="form-task"] {
   padding-right: 12px;
   font-size: 22px;
   padding-left: 10px;
-  width: 90%;
+  width: 80%;
   border: 1px dotted #000;
   border-radius: 10px;
   background-color: transparent;
@@ -151,6 +160,7 @@ form input[type="submit"] {
   height: 64px;
   border: none;
   background-size: 100%;
+  outline: none;
 }
 
 form input[type="submit"]:active {
