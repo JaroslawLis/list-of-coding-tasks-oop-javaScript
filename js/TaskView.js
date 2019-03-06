@@ -55,7 +55,7 @@ class TaskView {
         this.render();
 
     }
-    handleClick() {
+    handleClick(event) {
 
         const myElement = event.target;
 
