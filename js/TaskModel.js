@@ -32,6 +32,10 @@ class TaskModel {
         this.tasksCodeList[id].is_Done = true;
         this.writeTask(this.tasksCodeList);
     }
+    changeStatus(id) {
+        this.tasksCodeList[id].status = 'shedule';
+        this.writeTask(this.tasksCodeList);
+    }
 
 
 }

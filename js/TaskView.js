@@ -17,22 +17,29 @@ class TaskView {
         const d = new Date(date);
         const date_string = `${this.leadingZero(d.getDate())} ${this.leadingZero(this.monthNames[d.getMonth()])} ${d.getFullYear()}`;
 
-        // console.log(date_string);
         return date_string;
 
     }
     render() {
-        const todoListTable = this.taskModel.getTasksCodeList();
-        let todoList = todoListTable.filter(element => element.is_Done === false && element.status === 'shedule');
-
+        const todoList = this.taskModel.getTasksCodeList();
+        // let todoList = todoListTable.filter(element => element.is_Done === false && element.status === 'shedule');
+        let counter = 0;
         let html = '';
         todoList.forEach((data, i) => {
-            if (!data.is_Done) {
-                html += `<div class="row_in_table" data-id="${i}"><div>${(i + 1)}</div><div>${data.textTask} </div><div>${this.display_date(data.dateTask)
+            if (data.is_Done === false && data.status === 'shedule') {
+                html += `<div class="row_in_table" data-id="${i}"><div>${(++counter)}</div><div>${data.textTask} </div><div>${this.display_date(data.dateTask)
                }</div><button class="remove"</button><button class="mark_as_done"</button></div>`;
             }
         });
-
+        html += `<div class="row_in_table">xxxxxxxxxxxxxxxxxODROCZONE</div>`;
+        counter = 0;
+        // todoList = todoListTable.filter(element => element.is_Done === false && element.status === 'deferred');
+        todoList.forEach((data, i) => {
+            if (data.is_Done === false && data.status === 'deferred') {
+                html += `<div class="row_in_table" data-id="${i}"><div>${++counter}</div><div>${data.textTask} </div><div>${this.display_date(data.dateTask)
+               } </div><button class="remove"</button><button class ="mark_as_done"</button><button class="change_status"</button></div>`;
+            }
+        });
         this.taskView.innerHTML = html;
 
 
@@ -59,6 +66,10 @@ class TaskView {
         } else if (myElement.classList == 'mark_as_done') {
             const id = event.target.parentElement.dataset.id;
             this.taskModel.markTask(id);
+            this.render();
+        } else if (myElement.classList == 'change_status') {
+            const id = event.target.parentElement.dataset.id;
+            this.taskModel.changeStatus(id);
             this.render();
         }
     }
