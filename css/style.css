@@ -133,6 +133,33 @@ main div.container div#tasks div.row_in_table div:nth-child(3) {
   white-space: nowrap;
 }
 
+main .burger {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  font-size: 50px;
+  z-index: 1;
+}
+
+main i.off {
+  display: none;
+}
+
+main aside.off {
+  right: -300px;
+}
+
+main aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: #000;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 form {
   max-width: 50%;
   display: -webkit-box;

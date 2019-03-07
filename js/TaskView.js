@@ -6,6 +6,9 @@ class TaskView {
         this.input = document.querySelector('input[name="form-task"]');
         document.querySelector('form.add-task').addEventListener('submit', this.addCodeTask.bind(this));
         document.querySelector('#tasks').addEventListener('click', this.handleClick.bind(this));
+        document.querySelector('.burger').addEventListener('click', function (event) {
+            console.log(event.target);
+        })
         this.monthNames = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
         this.render();
     }
