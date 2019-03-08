@@ -17,6 +17,10 @@ main {
   max-height: 1120px;
 }
 
+main #tasks > div#break {
+  background-color: #eccc68;
+}
+
 main div.container {
   margin: 20px auto;
   width: 60%;
@@ -32,7 +36,7 @@ main div.container div#tasks {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #dfe4ea;
   border-radius: 20px;
   padding: 30px;
 }
@@ -103,18 +107,26 @@ main div.container div#tasks div.row_in_table button[class="change_status"] {
           transform: translateY(10%);
   background: url("../icons/icons8-replace-64.png");
   background-size: cover;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 main div.container div#tasks div.row_in_table button[class="change_status"]:hover {
-  background-color: #b8e994;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+main div.container div#tasks div.row_in_table button[class="change_status"]:active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 main div.container div#tasks div.row_in_table:nth-child(odd) {
-  background-color: #e1e1e1;
+  background-color: #ced6e0;
 }
 
 main div.container div#tasks div.row_in_table:hover {
-  background-color: #ffe6e6;
+  background-color: #eccc68;
 }
 
 main div.container div#tasks div.row_in_table div:nth-child(1) {
@@ -141,8 +153,17 @@ main .burger {
   z-index: 1;
 }
 
+main .burger i {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 main i.off {
   display: none;
+}
+
+main i.fa-times {
+  color: #fff;
 }
 
 main aside.off {
@@ -155,9 +176,10 @@ main aside {
   right: 0;
   height: 100vh;
   width: 300px;
-  background-color: #000;
-  -webkit-transition: .2s;
-  transition: .2s;
+  background-color: #2f3542;
+  opacity: .58;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 form {

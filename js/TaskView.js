@@ -6,10 +6,14 @@ class TaskView {
         this.input = document.querySelector('input[name="form-task"]');
         document.querySelector('form.add-task').addEventListener('submit', this.addCodeTask.bind(this));
         document.querySelector('#tasks').addEventListener('click', this.handleClick.bind(this));
-        document.querySelector('.burger').addEventListener('click', function (event) {
-            console.log(event.target);
-        })
+        document.querySelector('.burger').addEventListener('click', this.burgerIcon.bind(this));
         this.monthNames = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
+        this.burger_icon1 = document.querySelector('.fas.fa-bars');
+        this.burger_icon2 = document.querySelector('.fas.fa-times');
+        this.aside = document.querySelector('aside');
+
+
+
         this.render();
     }
 
@@ -34,7 +38,7 @@ class TaskView {
                }</div><button class="remove"</button><button class="mark_as_done"</button></div>`;
             }
         });
-        html += `<div class="row_in_table">xxxxxxxxxxxxxxxxxODROCZONE</div>`;
+        html += `<div class="row_in_table" id="break">xxxxxxxxxxxxxxxxxODROCZONE</div>`;
         counter = 0;
         // todoList = todoListTable.filter(element => element.is_Done === false && element.status === 'deferred');
         todoList.forEach((data, i) => {
@@ -75,5 +79,10 @@ class TaskView {
             this.taskModel.changeStatus(id);
             this.render();
         }
+    }
+    burgerIcon() {
+        this.burger_icon1.classList.toggle('off');
+        this.burger_icon2.classList.toggle('off');
+        this.aside.classList.toggle('off');
     }
 }
