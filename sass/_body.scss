@@ -12,4 +12,10 @@ body {
     background-image: linear-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dad298), color-stop(100%, #b0dab8));
 
     background-image: linear-gradient(to left, #dad298, #b0dab8);
+
+    div.pomodoro_div {
+        line-height: 80px;
+        text-align: center;
+        font-size: 60px;
+    }
 }

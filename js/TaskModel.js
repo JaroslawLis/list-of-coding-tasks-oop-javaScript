@@ -1,6 +1,8 @@
 class TaskModel {
     constructor() {
         this.tasksCodeList = JSON.parse(localStorage.getItem('savedCodeTasks')) || [];
+        this.pomodoro = 1500;
+        this.timer;
     }
     writeTask(tasksCodeList) {
         localStorage.setItem('savedCodeTasks', JSON.stringify(tasksCodeList));

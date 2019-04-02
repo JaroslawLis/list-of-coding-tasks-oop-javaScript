@@ -7,17 +7,18 @@ class TaskView {
         document.querySelector('form.add-task').addEventListener('submit', this.addCodeTask.bind(this));
         document.querySelector('#tasks').addEventListener('click', this.handleClick.bind(this));
         document.querySelector('.burger').addEventListener('click', this.burgerIcon.bind(this));
+
         this.monthNames = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
         this.burger_icon1 = document.querySelector('.fas.fa-bars');
         this.burger_icon2 = document.querySelector('.fas.fa-times');
         this.aside = document.querySelector('aside');
-
+        this.aside.addEventListener('click', this.pomodoroTimer);
 
 
         this.render();
     }
 
-    leadingZero(i) {
+    leadingZero = (i) => {
         return (i < 10) ? '0' + i : i;
     }
     display_date(date) {
@@ -38,9 +39,9 @@ class TaskView {
                }</div><button class="remove"</button><button class="mark_as_done"</button></div>`;
             }
         });
-        html += `<div class="row_in_table" id="break">xxxxxxxxxxxxxxxxxODROCZONE</div>`;
+        html += `<div class="row_in_table" id="break">-  --- ----------ODROCZONE--------------</div>`;
         counter = 0;
-        // todoList = todoListTable.filter(element => element.is_Done === false && element.status === 'deferred');
+
         todoList.forEach((data, i) => {
             if (data.is_Done === false && data.status === 'deferred') {
                 html += `<div class="row_in_table" data-id="${i}"><div>${++counter}</div><div>${data.textTask} </div><div>${this.display_date(data.dateTask)
@@ -53,7 +54,7 @@ class TaskView {
     }
     addCodeTask(event) {
         event.preventDefault();
-        console.log(event);
+
         // target[0] - becouse it is a first input
         let status = document.querySelector('input[name = "opcja"]:checked').value;
         this.taskModel.addTask(event.target[0].value, status);
@@ -84,5 +85,32 @@ class TaskView {
         this.burger_icon1.classList.toggle('off');
         this.burger_icon2.classList.toggle('off');
         this.aside.classList.toggle('off');
+    }
+    pomodoro_handler = () => {
+        const timer_text = document.querySelector('.pomodoro_div');
+        this.timer = setInterval(() => {
+            let time_left = this.taskModel.pomodoro;
+            let time_text = `${this.leadingZero(Math.floor(time_left/60))} : ${this.leadingZero(time_left%60) }`;
+            timer_text.innerHTML = time_text;
+            //console.log(this.taskModel.pomodoro)
+            this.taskModel.pomodoro--;
+        }, 1000)
+    }
+
+    pomodoroTimer = (event) => {
+
+        if (event.target.className === 'pomodoro') {
+            const pomodoro_box = document.querySelector('header');
+
+            let div = document.createElement("div");
+            div.className = "pomodoro_div";
+            pomodoro_box.appendChild(div);
+
+            this.pomodoro_handler();
+            // console.log(this)
+            // console.log(view.taskModel.pomodoro)
+        }
+
+
     }
 }

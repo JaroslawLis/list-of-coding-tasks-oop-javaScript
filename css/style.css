@@ -2,6 +2,15 @@ h1 {
   text-align: center;
 }
 
+div.pomodoro_div {
+  position: fixed;
+  background-color: #fff;
+  height: 100px;
+  width: 30%;
+  left: 0;
+  top: 0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -11,6 +20,12 @@ body {
   background-image: linear-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dad298), color-stop(100%, #b0dab8));
   background-image: -webkit-gradient(linear, right top, left top, from(#dad298), to(#b0dab8));
   background-image: linear-gradient(to left, #dad298, #b0dab8);
+}
+
+body div.pomodoro_div {
+  line-height: 80px;
+  text-align: center;
+  font-size: 60px;
 }
 
 main {
