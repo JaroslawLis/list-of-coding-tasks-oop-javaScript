@@ -216,9 +216,16 @@ main aside {
   height: 100vh;
   width: 300px;
   background-color: #2f3542;
-  opacity: .58;
+  opacity: .78;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+main aside button {
+  padding: 10px;
+  background-color: #fff;
+  opacity: 1;
+  margin: 10px 10px;
 }
 
 form {
@@ -241,13 +248,11 @@ form div {
 }
 
 form input[name="form-task"] {
-  padding-right: 12px;
+  padding: 10px 12px 10px 10px;
   font-size: 22px;
-  padding-left: 10px;
   width: 80%;
   border: 1px dotted #000;
   border-radius: 10px;
-  background-color: transparent;
 }
 
 form input[name="form-task"]:focus {
@@ -255,8 +260,6 @@ form input[name="form-task"]:focus {
   border-color: rgba(102, 175, 233, 0.9);
   -webkit-box-shadow: -3px -3px 5px 0px rgba(0, 110, 255, 0.75), 3px 3px 5px 0px rgba(0, 110, 255, 0.75), 3px -3px 5px 0px rgba(0, 110, 255, 0.75), -3px 3px 5px 0px rgba(0, 110, 255, 0.75);
           box-shadow: -3px -3px 5px 0px rgba(0, 110, 255, 0.75), 3px 3px 5px 0px rgba(0, 110, 255, 0.75), 3px -3px 5px 0px rgba(0, 110, 255, 0.75), -3px 3px 5px 0px rgba(0, 110, 255, 0.75);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#cbcb10), to(#e0e421));
-  background-image: linear-gradient(to top, #cbcb10, #e0e421);
 }
 
 form input[type="submit"] {

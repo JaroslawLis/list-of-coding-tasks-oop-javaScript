@@ -110,10 +110,12 @@ class TaskView {
         this.aside.classList.toggle("off");
     }
     pomodoro_handler() {
+
         this.timer_text = document.querySelector(".pomodoro_span");
         const pomodoro_button = document.querySelector("button.active")
         pomodoro_button.addEventListener('click', () => this.handleClickPomodoroButton(pomodoro_button))
         this.pomodoroInterval()
+
     }
 
     handleClickPomodoroButton(pomodoro_button) {
@@ -145,7 +147,7 @@ class TaskView {
     }
 
     pomodoroTimer(event) {
-        if (event.target.className === "pomodoro") {
+        if (event.target.className === "pomodoro" && (this.taskModel.pomodoro === 1500 || this.taskModel.pomodoro <= 0)) {
             const pomodoro_box = document.querySelector("header");
 
             let div = document.createElement("div");

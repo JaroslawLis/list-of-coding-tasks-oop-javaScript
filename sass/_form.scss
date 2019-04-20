@@ -8,22 +8,18 @@ form {
     padding: 10px 10px 10px 10px;
 
     div {
-
         width: 100%;
     }
 
     input[name="form-task"] {
-        padding-right: 12px;
+        padding: 10px 12px 10px 10px;
         font-size: 22px;
-        padding-left: 10px;
         width: 80%;
         border: 1px dotted #000;
         border-radius: 10px;
-        background-color: transparent;
-
+        //background-color: transparent;
 
         &:focus {
-            //border-collapse: separate;
             outline: none;
             border-color: rgba(102, 175, 233, .9);
             box-shadow: -3px -3px 5px 0px rgba(0, 110, 255, 0.75),
@@ -31,11 +27,6 @@ form {
                 3px -3px 5px 0px rgba(0, 110, 255, 0.75),
                 -3px 3px 5px 0px rgba(0, 110, 255, 0.75);
 
-
-
-            // background-image: linear-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #e6d133), color-stop(100%, #b0dab8));
-
-            background-image: linear-gradient(to top, rgb(203, 203, 16), rgb(224, 228, 33));
 
         }
 
@@ -50,8 +41,6 @@ form {
         color: inherit;
         // background-color: transparent;
         cursor: pointer;
-
-        // background: url('../icons/icons8-add-new-64.png') no-repeat;
         background: url('../icons/icons8-plus.svg') no-repeat;
         text-indent: -1000em;
         width: 64px;

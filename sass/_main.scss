@@ -132,6 +132,9 @@ main {
         right: 30px;
         font-size: 50px;
         z-index: 1;
+
+
+
     }
 
     .burger i {
@@ -158,7 +161,14 @@ main {
         height: 100vh;
         width: 300px;
         background-color: #2f3542;
-        opacity: .58;
+        opacity: .78;
         transition: .4s;
+
+        button {
+            padding: 10px;
+            background-color: #fff;
+            opacity: 1;
+            margin: 10px 10px;
+        }
     }
 }
