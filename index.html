@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Tasks</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
-        integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css\style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Simple List of Coding Tasks</h1>
-
+      <h1>Simple List of Coding Tasks</h1>
     </header>
     <main>
-        <div class="container">
-            <form action="" class="add-task">
-                <div><input type="text" name="form-task" placeholder="add Your code task">
-                    <!-- <label for="">Wybierz opcje</label> -->
+      <div class="container">
+        <form action="" class="add-task">
+          <div>
+            <input
+              type="text"
+              name="form-task"
+              placeholder="add Your code task"
+            />
+            <!-- <label for="">Wybierz opcje</label> -->
 
-                    <input type="submit" id=""></div>
-                <div><label for=""> <input type="radio" name="opcja" value="shedule" checked>Bieżące zadanie</label>
-                    <label for=""> <input type="radio" name="opcja" value="deferred">Odroczone zadanie</label></div>
+            <input type="submit" id="" />
+          </div>
+          <div>
+            <label for="">
+              <input type="radio" name="opcja" value="shedule" checked />Current
+              Task</label
+            >
+            <label for="">
+              <input type="radio" name="opcja" value="deferred" />Postponed
+              task</label
+            >
+          </div>
+        </form>
+        <div id="tasks"></div>
+      </div>
+      <div class="burger">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times off"></i>
+      </div>
 
-
-
-            </form>
-            <div id="tasks"></div>
-        </div>
-        <div class="burger">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times off"></i>
-        </div>
-
-
-
-
-
-        <aside class="off">
-            <button type="button" class="pomodoro">Pomodoro Timer</button>
-        </aside>
+      <aside class="off">
+        <button type="button" class="pomodoro">Pomodoro Timer</button>
+      </aside>
     </main>
     <footer>
-        <a href="https://icons8.com/icon/48198/add-new">Add New icon by Icons8</a>
+      <a href="https://icons8.com/icon/48198/add-new">Add New icon by Icons8</a>
     </footer>
-
-
 
     <script src="js/TaskModel.js"></script>
     <script src="js/TaskView.js"></script>
     <script src="js/TaskController.js"></script>
     <script src="js/App.js"></script>
-</body>
-
+  </body>
 </html>

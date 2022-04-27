@@ -33,6 +33,13 @@ div.pomodoro_div button.active {
 
 div.pomodoro_div button.active.pause {
   background: url("../icons/icons8-play-64.png");
+  background-size: cover;
+}
+
+div.pomodoro_div i {
+  float: right;
+  font-size: 40px;
+  padding: 5px;
 }
 
 body {
@@ -280,5 +287,21 @@ form input[type="submit"] {
 form input[type="submit"]:active {
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #a1a1a1;
 }
 /*# sourceMappingURL=style.css.map */

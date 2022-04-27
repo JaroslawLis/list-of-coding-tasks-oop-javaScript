@@ -63,7 +63,7 @@ class TaskView {
         )}</div><button class="remove"</button><button class="mark_as_done"</button></div>`;
             }
         });
-        html += `<div class="row_in_table" id="break">-  --- ----------ODROCZONE--------------</div>`;
+        html += `<div class="row_in_table" id="break">-  --- ----------DEFER--------------</div>`;
         counter = 0;
 
         todoList.forEach((data, i) => {
@@ -151,15 +151,18 @@ class TaskView {
             const pomodoro_box = document.querySelector("header");
 
             let div = document.createElement("div");
+            let i_close = document.createElement("i");
             let span = document.createElement("span");
-            span.className = "pomodoro_span";
             let button = document.createElement("button");
+            span.className = "pomodoro_span";
+            i_close.className = "pomodoro_close fas fa-times"
             button.className = "active";
             div.appendChild(span);
             div.appendChild(button);
+            div.appendChild(i_close);
             div.className = "pomodoro_div";
             pomodoro_box.appendChild(div);
-
+           i_close.addEventListener('click', () => div.remove())
             this.pomodoro_handler();
 
         }
